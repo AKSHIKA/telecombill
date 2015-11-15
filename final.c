@@ -69,8 +69,8 @@ void see(char *x, int len) {
 	int i, cc = 0, j, r = 0, k;
 	char str[1000], str1[10], c[30] = "a";
 	data d;
-	strcpy(str, x);	
-	for(i = 0; i < len; i++) {
+	strcpy(str, x);	                                       
+	for(i = 0; i < len; i++) {                                
 		if(str[i] == ',') { 
 			for(j = i + 1; j < len; j++) {
 				if(str[j] != ',')
@@ -359,7 +359,7 @@ void listcdr() {
 		perror("open failed");
 		return ;
 	}
-	printf("\tCallingno\tCalledno\tDate\t\tTime  Duration  Incomingroute  Outgoingroute\n");
+	printf("\tCallingno\tCalledno\tDate\t\tTime  Duration  Incomingroute Outgoingroute\n");
 	while(fscanf(fp, "%s %s %s %d %d %s %s", s.ingno, s.edno, s.date, &s.time, &s.dur, s.in, s.to ) != -1) 
 	printf("\t%s\t%s\t%s\t%d\t%d\t%s\t\t%s\n", s.ingno, s.edno, s.date, s.time, s.dur, s.in, s.to);
 	fclose(fp);
